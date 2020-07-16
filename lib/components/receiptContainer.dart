@@ -6,6 +6,7 @@ class ReceiptContainer extends StatelessWidget {
   ReceiptContainer({this.onPressed});
 
   final VoidCallback onPressed;
+  final color = Color(0xffbdbdbd);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class ReceiptContainer extends StatelessWidget {
       children: <Widget>[
         CustomPaint(
           size: Size(width - 20, 6),
-          painter: ShapesPainter(color: Colors.black, rotate: false),
+          painter: ShapesPainter(color: color, rotate: false),
         ),
         GestureDetector(
           onTap: () {
@@ -26,17 +27,17 @@ class ReceiptContainer extends StatelessWidget {
               width: width - 20,
               height: 100,
               decoration: new BoxDecoration(
-                color: Colors.black,
+                color: color,
                 shape: BoxShape.rectangle,
               ),
               child: Padding(
                 padding: EdgeInsets.all(10),
-                child: Text("hallo", style: TextStyle(color: Colors.white)),
+                child: Text("hallo", style: TextStyle(color: Colors.black)),
               )),
         ),
         CustomPaint(
           size: Size(width - 20, 6), //2
-          painter: ShapesPainter(color: Colors.black, rotate: true), //3
+          painter: ShapesPainter(color: color, rotate: true), //3
         ),
       ],
     );

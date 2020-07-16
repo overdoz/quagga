@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../main.dart';
 import '../components/receiptContainer.dart';
 import './quaggCommentsView.dart';
+import '../components/header.dart';
 
 class MyScaffold extends StatelessWidget {
   @override
@@ -13,12 +14,11 @@ class MyScaffold extends StatelessWidget {
       child: Column(
         children: <Widget>[
           MyAppBar(
-            title: Text(
-              'Example title',
-            ),
+            title: Header(title: "Honzi 69"),
           ),
           Expanded(
               child: ListView(
+            itemExtent: 130,
             scrollDirection: Axis.vertical,
             children: <Widget>[
               ReceiptContainer(
