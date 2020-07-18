@@ -9,9 +9,24 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DecoratedBox(
-      decoration: BoxDecoration(color: Colors.blue),
-      child: Text(title),
+    return Stack(
+      children: <Widget>[
+        Text(
+          title,
+          style: TextStyle(
+            fontFamily: "Steelfish",
+
+            decoration: TextDecoration.underline,
+            // decorationStyle: TextDecorationStyle.wavy,
+            decorationColor: Color(0xFF00E9BC),
+            decorationThickness: 12,
+          ),
+        ),
+        Text(
+          title,
+          style: TextStyle(fontFamily: "Steelfish"),
+        ),
+      ],
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../views/feedView.dart';
 import '../components/buttons/NavigationButton.dart';
+import '../views/spotsView.dart';
 
 class ViewController extends StatefulWidget {
   ViewController({Key key}) : super(key: key);
@@ -38,7 +39,7 @@ class _ViewControllerState extends State<ViewController> {
           scrollDirection: Axis.horizontal,
           children: <Widget>[
             MyScaffold(),
-            Center(child: Text("2")),
+            SpotsView(),
             Center(child: Text("3")),
           ],
         ),
