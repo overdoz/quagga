@@ -15,7 +15,7 @@ class Header extends StatelessWidget {
           title,
           style: TextStyle(
             fontFamily: "Steelfish",
-
+            fontSize: 20.0,
             decoration: TextDecoration.underline,
             // decorationStyle: TextDecorationStyle.wavy,
             decorationColor: Color(0xFF00E9BC),
@@ -24,7 +24,10 @@ class Header extends StatelessWidget {
         ),
         Text(
           title,
-          style: TextStyle(fontFamily: "Steelfish"),
+          style: TextStyle(
+            fontFamily: "Steelfish",
+            fontSize: 20.0,
+          ),
         ),
       ],
     );

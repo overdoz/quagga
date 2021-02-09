@@ -4,21 +4,26 @@ import 'package:quagga_app/components/receiptContainer.dart';
 class SecondRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Material(
-        child: Column(
-      children: <Widget>[
-        Container(
-            alignment: Alignment.centerLeft,
-            padding: EdgeInsets.all(10),
-            child: BackButton(
+    return Container(
+      color: Colors.white,
+      child: SafeArea(
+        child: Material(
+            child: Column(
+          children: <Widget>[
+            Container(
+                alignment: Alignment.centerLeft,
+                padding: EdgeInsets.all(10),
+                child: BackButton(
+                  onPressed: () => Navigator.pop(context),
+                )),
+            Center(
+                child: ReceiptContainer(
               onPressed: () => Navigator.pop(context),
-            )),
-        Center(
-            child: ReceiptContainer(
-          onPressed: () => Navigator.pop(context),
-        ))
-      ],
-    ));
+            ))
+          ],
+        )),
+      ),
+    );
 
     // Center(
     //   child: RaisedButton(
